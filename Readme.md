@@ -22,6 +22,19 @@ This application is similar to a popular US application called [StubHub](https:/
     * NPM module to share code across services. 
 * NATS Streaming Service (Network Address Translation)
     * Event-Bus
+* Running Services with Google Cloud
+
+### Configuration
+
+Whe testing the development url (ticketing.dev) you are going to obtain an error in the browser. A fake Ingress Certificate. Just click in the page adn type:
+* thisisunsafe
+
+### Development Tools
+* Node Js
+* Typescript
+* Docker
+* Skaffold
+* Ingress-NGINX
 
 ### Resource Types
 
