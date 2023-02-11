@@ -50,6 +50,10 @@ gcloud components install kubectl
 gcloud container clusters get-credentials <cluster name>
 ```
 
+### Abstract Classes
+* Cannot be instantiated
+* Used to set up requirements for subclasses.
+* Do create a Class when translated to JS, which means we can use it in 'instanceOf' checks.
 
 ### Resources
 
