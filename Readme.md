@@ -35,8 +35,26 @@ Whe testing the development url (ticketing.dev) you are going to obtain an error
 * Docker
 * Skaffold
 * Ingress-NGINX
+* React
 
-### Resource Types
+### Notes
+
+If you do not want to run Docker at all:
+* Close Docker Desktop
+* Run:
+```shell
+gcloud components install kubectl
+```
+* Run:
+```shell
+gcloud container clusters get-credentials <cluster name>
+```
+
+
+### Resources
+
+* [Google Cloud Free Trial](https://cloud.google.com/free)
+* [Google Cloud SDK Install](https://cloud.google.com/sdk/docs/install-sdk)
 
 
 
