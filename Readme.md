@@ -55,6 +55,11 @@ gcloud container clusters get-credentials <cluster name>
 * Used to set up requirements for subclasses.
 * Do create a Class when translated to JS, which means we can use it in 'instanceOf' checks.
 
+### Handling User Authentication
+
+* User authentication handling is a challenging problem with microservices.
+
+
 ### Resources
 
 * [Google Cloud Free Trial](https://cloud.google.com/free)
