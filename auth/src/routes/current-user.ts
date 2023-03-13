@@ -1,7 +1,6 @@
 import express from 'express';
 import { Request, Response} from 'express'
-import { currentUser } from '../middleware/current-user';
-import { requireAuth } from '../middleware/require-auth';
+import { currentUser } from '@gstickets2023/common'
 
 const router = express.Router();
 

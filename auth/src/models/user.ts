@@ -9,10 +9,16 @@ interface UserAttrs {
     password: string;
 }
 
+// Represents the Entire Collection of Data
 interface UserModel extends mongoose.Model<UserDoc> {
     build(attrs: UserAttrs): UserDoc;
 }
 
+// Represents on single record.
+interface UserDoc extends mongoose.Document {
+    email: string;
+    password: string;
+}
 
 const userSchema = new mongoose.Schema({
     email: {
@@ -47,10 +53,7 @@ userSchema.statics.build = (attrs: UserAttrs) => {
     return new User(attrs)
 }
 
-interface UserDoc extends mongoose.Document {
-    email: string;
-    password: string;
-}
+
 
 const User = mongoose.model<UserDoc, UserModel>('User', userSchema);
 
