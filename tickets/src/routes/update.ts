@@ -5,8 +5,11 @@ import {
     validateRequest,
     NotFoundError,
     requireAuth,
-    NotAuthorizedError
+    NotAuthorizedError,
+    BadRequestError
 } from '@gstickets2023/common';
+import { TicketUpdatedPublisher } from '../events/publishers/ticket-updated-publisher';
+import { natsWrapper } from '../nats-wrapper';
 
 const router = express.Router();
 
@@ -32,6 +35,10 @@ router.put('/api/tickets/:id', requireAuth,
         throw new NotAuthorizedError();
     }
 
+    if(ticket.orderId){
+        throw new BadRequestError('Cannot edit a reserved ticket');
+    }
+
     ticket.set({
         title: req.body.title,
         price: req.body.price
@@ -39,6 +46,13 @@ router.put('/api/tickets/:id', requireAuth,
 
     await ticket.save();
 
+    new TicketUpdatedPublisher(natsWrapper.client).publish({
+        id: ticket.id,
+        title: ticket.title,
+        price: ticket.price,
+        userId: ticket.userId,
+        version: ticket.version
+    })
     res.send(ticket);
 })
 
