@@ -1,5 +1,6 @@
-import { natsWrapper } from './nats-wrapper';
 import { OrderCreatedListener } from './events/listeners/order-created-listener';
+import { natsWrapper } from './nats-wrapper';
+
 
 const start = async () => {
   if (!process.env.NATS_CLIENT_ID) {
@@ -29,6 +30,8 @@ const start = async () => {
   } catch (err) {
     console.error(err);
   }
+
+  console.log('Expiration Service Started');
 };
 
 start();
