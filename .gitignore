@@ -3,3 +3,4 @@ secrets.txt
 .vscode
 client/.env.production
 client/.env.local
+.DS_Store

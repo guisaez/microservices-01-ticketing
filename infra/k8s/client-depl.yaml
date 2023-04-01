@@ -15,9 +15,6 @@ spec:
       containers:
         - name: client
           image: us.gcr.io/ticketing-dev-377423/client
-          env:
-            - name: STRIPE_PUB_KEY
-              value: 'pk_test_51Mr0ytLpkiXGmtRLfvAeDk8gjMfpBGtJ6TXhpG5aXRVla1apUnEN5dBuVUfcnCsRWMWEZ3iN2G4CgqHPrpnePkZf00O99DeaVR'
 
 ---
 apiVersion: v1
