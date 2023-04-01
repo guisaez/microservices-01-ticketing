@@ -19,9 +19,10 @@ router.post('/api/orders',requireAuth, [
         .withMessage('Ticket Id must be provided')
 ], async (req: Request, res: Response) => {
     const { ticketId } = req.body;
-
+    
     // Find the ticket the user is trying to order in the database
     const ticket = await Ticket.findById(ticketId);
+
     if(!ticket){
         throw new NotFoundError();
     }
