@@ -48,7 +48,7 @@ const start = async () => {
     }
 
     app.listen(3000, () => {
-        console.log("Orders Server Listening on Port: 3000")
+        console.log("Orders-Service Server Listening on Port: 3000")
     });
 }
 
