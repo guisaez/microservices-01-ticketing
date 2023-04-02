@@ -14,7 +14,6 @@ const buildClient = ({ req }) => {
         return axios.create({
             baseURL: 'http://www.ticketing-app-prod.world/', // If local you would replace this with '/'
             headers: req.headers, // not needed with local 
-            httpsAgent: new https.Agent({keepAlive: true}),
         })
     }   
 }
