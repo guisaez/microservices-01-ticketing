@@ -19,7 +19,7 @@ const Header = ( { currentUser }) => {
         });
 
     return (
-        <nav className="navbar navbar-light bg-light navbar-expand-lg">
+        <nav className="navbar navbar-light bg-light">
             <Link legacyBehavior href="/">
                 <a className='navbar-brand'>GitTix</a>
             </Link>
