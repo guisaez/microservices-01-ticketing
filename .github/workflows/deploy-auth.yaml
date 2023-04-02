@@ -1,4 +1,4 @@
-name: daploy-auth
+name: deploy-auth
   
 on:
   push:
