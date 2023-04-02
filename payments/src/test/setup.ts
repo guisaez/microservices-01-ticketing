@@ -10,8 +10,6 @@ jest.mock('../nats-wrapper.ts');
 
 let mongo: any;
 
-console.log(process.env.STRIPE_KEY)
-
 beforeAll(async () => {
     process.env.JWT_KEY = 'asdfasdf';
 
