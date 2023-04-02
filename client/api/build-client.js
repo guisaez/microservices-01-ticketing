@@ -11,7 +11,8 @@ const buildClient = ({ req }) => {
     }else{
         // We must be on the browser
         return axios.create({
-            baseURL: '/'
+            baseURL: 'http://www.ticketing-app-prod.world/', // If local you would replace this with '/'
+            headers: req.headers // not needed with local 
         })
     }   
 }

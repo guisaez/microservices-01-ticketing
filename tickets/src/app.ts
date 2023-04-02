@@ -14,7 +14,7 @@ app.use(json());
 app.use(
     cookieSession({
         signed: false,
-        secure: process.env.NODE_ENV !== 'test' // Only through HTTPS connection, notice that JEST uses HTTP (must be set to false on test environment)
+        secure: false // Only through HTTPS connection, notice that JEST uses HTTP (must be set to false on test environment)
     })
 )
 
