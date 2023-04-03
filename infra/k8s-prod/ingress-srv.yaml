@@ -6,6 +6,11 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/use-regex: 'true'
 spec:
+  defaultBackend:
+    service:
+      name: client-srv
+      port:
+        number: 3000
   rules:
     - host: www.ticketing-app-prod.world
       http:

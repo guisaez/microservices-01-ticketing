@@ -4,7 +4,7 @@
 
 This application is similar to a popular US application called [StubHub](https://www.stubhub.com). User can sell tickets to sporting events, concerts, etc to other users. 
 
-* Users can list a ticker for an event (concert, sports) for sale.
+* Users can list a ticket for an event (concert, sports) for sale.
 * Other users can purchase this ticket
 * Any user can list tickets for sale and purchase tickets.
 * When a user attempts to purchase a ticket, the ticket will be locked for 15 min. The user has 15 minutes to enter their payment info.
