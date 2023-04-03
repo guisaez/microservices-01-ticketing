@@ -43,5 +43,5 @@ kubectl config current-context
 
 kubectl config use-context <context_name> 
 ```
-
-## Connecting to the Cluster via GitHub workflow.
+* Ensure you are in the context of Digital ocean and set up a kuberenetes Ingress Controller.
+    * [Kubernetes Ingress-Nginx](https://kubernetes.github.io/ingress-nginx/deploy/)
