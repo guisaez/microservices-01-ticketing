@@ -53,6 +53,12 @@ metadata:
   annotations:
     service.beta.kubernetes.io/do-loadbalancer-enable-proxy-protocol: 'true'
     service.beta.kubernetes.io/do-loadbalancer-hostname: 'www.ticketing-app-prod.world'
+    service.beta.kubernetes.io/do-loadbalancer-name: 'www.ticketing-app-prod.world'
+    service.beta.kubernetes.io/do-loadbalancer-protocol: 'http'
+    service.beta.kubernetes.io/do-loadbalancer-tls-ports: '443'
+    service.beta.kubernetes.io/do-loadbalancer-tls-passthrough: 'true'
+    service.beta.kubernetes.io/do-loadbalancer-http-ports: '80'
+    service.beta.kubernetes.io/do-loadbalancer-algorithm: 'least_connections'
   labels:
     helm.sh/chart: ingress-nginx-2.0.3
     app.kubernetes.io/name: ingress-nginx
